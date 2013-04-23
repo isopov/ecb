@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    
+    <!-- Spring-MVC config here -->
+    <context:component-scan base-package="com.sopovs.moradanen.ecb.controller"/>
+    <mvc:annotation-driven/>
+
+    <mvc:resources mapping="/favicon.ico" location="/WEB-INF/favicon.ico"/>
+    <mvc:resources mapping="/robots.txt" location="/WEB-INF/robots.txt"/>
+    <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+
+</beans>
